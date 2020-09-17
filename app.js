@@ -29,8 +29,9 @@ app.get("*",function(req,res) {
         let file = path.resolve("public" + req.url)
         console.log(file)
         res.sendFile(file)
+    } else {
+        res.send("Not Found")   
     }
-    /* res.send("Not Found") */ 
 })
 
 app.listen(3000, () => {
