@@ -1,0 +1,24 @@
+{
+  "name": "mercado-liebre",
+  "version": "1.0.0",
+  "description": "Trabajo de HTML / CSS",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norberto-rubado/mercado-liebre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/norberto-rubado/mercado-liebre/issues"
+  },
+  "homepage": "https://github.com/norberto-rubado/mercado-liebre#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,10 @@
+body {
+    width:800px;
+    font-size:45px;
+}
+#ancho_imagen {
+    width:800px;
+}
+.negrita {
+    font-weight: bold;
+}
