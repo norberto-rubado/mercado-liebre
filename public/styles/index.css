@@ -1,10 +1,171 @@
+:root {
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris_oscuro: #666;
+    --gris_claro: #ebebeb;
+    --verde: #39b54a;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
-    width:800px;
-    font-size:45px;
+    font-family: "roboto", sans-serif;
+    background-color: var(--blanco);
+    font-size: 12px;
+    margin: 10px;
 }
-#ancho_imagen {
-    width:800px;
+
+img {
+    width: 100%;
 }
-.negrita {
+
+i {
+    color: var(--negro);
+}
+
+li {
+    list-style-type: none;
+}
+
+/* header */
+
+header {
+    background-color: var(--amarillo);
+    padding: 10px;
     font-weight: bold;
+}
+
+.cuotas {
+    margin-top: 10px;
+    color: var(--negro);
+}
+
+.fas.fa-hand-holding-usd, .fas.fa-address-card, .fas.fa-sign-in-alt, .fas.fa-shopping-basket {
+    color: var(--negro);
+}
+
+/* nav */
+
+nav {
+    padding-top: 20px;
+    background-color: var(--amarillo);
+}
+
+nav ul{
+    padding-bottom: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#000;
+    font-size:16px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+/* banner */
+
+.banner {
+    margin: 10px 0px;
+}
+
+/* section */
+
+section {
+    background-color: var(--gris_claro);
+    margin-bottom: 30px;
+}
+
+.titulares {
+    font-weight: bold;
+    background-color: var(--gris_claro);
+    color:#666;
+}
+
+article {
+    background-color: var(--blanco);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.fas.fa-truck{
+    color: var(--verde);
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.descuento {
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--verde);
+}
+
+.descripcion {
+    font-size:16px;
+    font-weight: normal;
+}
+
+/* footer */
+
+.footer {
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+.fas.fa-credit-card, .fas.fa-gift, .fas.fa-user-shield {
+    color: var(--celeste); 
+}
+
+.texto_footer_1 {
+    font-weight: bold;
+    font-size:16px;
+}
+
+.texto_footer_2 {
+    line-height: 15px;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* register */
+
+.register {
+    line-height: 30px;
+    padding-top: 20px;
+}
+
+.register_grupo {
+    line-height: 20px;
+}
+
+.register_texto_1 {
+    font-weight: bold;
+    font-size:15px;
+}
+
+.register_texto_2 {
+    font-size:15px;
+}
+
+/*login */
+
+.login {
+    line-height: 30px;
+    padding-top: 20px;
+}
+
+.login_grupo {
+    line-height: 20px;
 }
