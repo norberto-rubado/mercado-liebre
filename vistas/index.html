@@ -10,149 +10,163 @@
 </head>
 <body>
     <header>
-        <img src="/images/logo-mercado-liebre.svg" alt= "No se encontro imagen"> 
-        <p>Lugar para la barra de busqueda</p>
+        <div class="logo_busqueda"> 
+            <img src="/images/logo-mercado-liebre.svg" alt="No se encontro imagen logo-mercado-liebre"> 
+            <div>
+                <input type="text" name="search" id="search" placeholder="Buscar productos, marcas y más">
+                <button type="submit"> 
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div> 
+
         <div class="cuotas">
             <i class="fas fa-hand-holding-usd"></i>
             <span>Compra en cuotas y sin tarjeta de credito</span> 
         </div>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#">Ofertas</a></li>
-            <li><a href="#">Tiendas Oficiales</a></li>
-            <li><a href="#">Vender</a></li>
-            <li><a href="#">Ayuda</a></li>
-        </ul>
-        <ul>    
-            <li>
-                <a href="/register">Crea tu Cuenta</a>
-                <i class="fas fa-address-card"></i>
-            </li>
-            <li>
-                <a href="/login">Ingresa</a>
-                <i class="fas fa-sign-in-alt"></i>
-            </li>
-            <li>
-                <a href="#">Mis Compras</a>
-                <i class="fas fa-shopping-basket"></i>
-            </li>
-        </ul>
-    </nav>
 
-    <div>
-        <img class="banner" src="/images/img-home-banner.jpg" alt= "No se encontro imagen">
-    </div>
+        <div class="hamburguesa">
+            <i class="fas fa-bars"></i>
+            <nav>
+                <ul>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+                <ul>    
+                    <li>
+                        <a href="/register">Crea tu Cuenta</a>
+                        <i class="fas fa-address-card"></i>
+                    </li>
+                    <li>
+                        <a href="/login">Ingresa</a>
+                        <i class="fas fa-sign-in-alt"></i>
+                    </li>
+                    <li>
+                        <a href="#">Mis Compras</a>
+                        <i class="fas fa-shopping-basket"></i>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>        
 
-    <section>
-        <h2 class="titulares">Basado en tu Ultima Compra</h2>
-        <article>
-            <div>
-                <img src="/images/img-cafetera-moulinex.jpg" alt= "No se encontro imagen cafetera-moulinex">
-            </div>
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>
-            <p class="precio">$6.770</p>
-            <p class="descuento">40% OFF</p>
-            <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
-        </article>
-        <article>
-            <div>
-                <img src="/images/img-macbook-pro-2019.jpg" alt= "No se encontro imagen macbook-pro-2019">
-            </div>
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>            <p class="precio">$230.000</p>
-            <p class="descuento">20% OFF</p>
-            <p class="descripcion">Macbook Pro 2019 Lorem ipsum, dolor sit amet</p>
-        </article>
-        <article>
-            <div>
-            <img src="/images/img-samsung-galaxy-s10.jpg" alt= "No se encontro imagen samsung-galaxy-s10">
-            </div>
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>            
-            <p class="precio">1. $70.500</p>
-            <p class="descuento">15% OFF</p>
-            <p class="descripcion">Teléfono móvil Samsung Galaxy S10 Lorem ipsum, dolor sit amet.</p>
-        </article>
-        <article>
-            <div>
-            <img src="/images/img-tv-samsung-smart.jpg" alt= "No se encontro imagen samsung-smart">
-            </div>
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>            <p class="precio">$6.770</p>
-            <p class="descuento">5% OFF</p>
-            <p class="descripcion">SmartTv Samsung 43" Lorem ipsum, dolor sit amet.</p>
-        </article>
+    <section class="banner">
+        <img src="/images/img-home-banner.jpg" alt= "No se encontro imagen">
     </section>
-    <section>
-        <h2 class="titulares">Ofertas</h2>
-        <article>
-            <div>
-            <img src="/images/img-cafetera-moulinex.jpg" alt= "No se encontro imagen cafetera-moulinex">
-            </div>    
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>            <p class="precio">$6.770</p>
-            <p class="descuento">40% OFF</p>
-            <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
-        </article>
-        <article>
-            <div>
-            <img src="/images/img-macbook-pro-2019.jpg" alt= "No se encontro imagen macbook-pro-2019">
-            </div>
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>            <p class="precio">$230.000</p>
-            <p class="descuento">20% OFF</p>
-            <p class="descripcion">Macbook Pro 2019 Lorem ipsum, dolor sit amet</p>
-        </article>
-        <article>
-            <div>
+
+    <main class="principal">
+        <section>
+            <h2 class="titulares">Basado en tu Ultima Compra</h2>
+            <article>
+                <div>
+                    <img src="/images/img-cafetera-moulinex.jpg" alt= "No se encontro imagen cafetera-moulinex">
+                </div>
+                <div class="camion">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <p class="precio">$6.770</p>
+                <p class="descuento">40% OFF</p>
+                <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
+            </article>
+            <article>
+                <div>
+                    <img src="/images/img-macbook-pro-2019.jpg" alt= "No se encontro imagen macbook-pro-2019">
+                </div>
+                <div>
+                    <i class="fas fa-truck "></i>
+                </div>            <p class="precio">$230.000</p>
+                <p class="descuento">20% OFF</p>
+                <p class="descripcion">Macbook Pro 2019 Lorem ipsum, dolor sit amet</p>
+            </article>
+            <article>
+                <div>
                 <img src="/images/img-samsung-galaxy-s10.jpg" alt= "No se encontro imagen samsung-galaxy-s10">
-            </div>
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>            <p class="precio">1. $70.500</p>
-            <p class="descuento">15% OFF</p>
-            <p class="descripcion">Teléfono móvil Samsung Galaxy S10 Lorem ipsum, dolor sit amet.</p>
-        </article>
-        <article>
-            <div>
-                <img src="/images/img-tv-samsung-smart.jpg" alt= "No se encontro imagen tv-samsung-smart">
-            </div>
-            <div>
-                <i class="fas fa-truck "></i>
-            </div>            <p class="precio">$6.770</p>
-            <p class="descuento">5% OFF</p>
-            <p class="descripcion">SmartTv Samsung 43" Lorem ipsum, dolor sit amet.</p>
-        </article>
-    </section>
-    <div class="footer">
-        <div>
+                </div>
+                <div>
+                    <i class="fas fa-truck "></i>
+                </div>            
+                <p class="precio">1. $70.500</p>
+                <p class="descuento">15% OFF</p>
+                <p class="descripcion">Teléfono móvil Samsung Galaxy S10 Lorem ipsum, dolor sit amet.</p>
+            </article>
+            <article>
+                <div>
+                <img src="/images/img-tv-samsung-smart.jpg" alt= "No se encontro imagen samsung-smart">
+                </div>
+                <div>
+                    <i class="fas fa-truck "></i>
+                </div>            <p class="precio">$6.770</p>
+                <p class="descuento">5% OFF</p>
+                <p class="descripcion">SmartTv Samsung 43" Lorem ipsum, dolor sit amet.</p>
+            </article>
+        </section>
+        <section>
+            <h2 class="titulares">Ofertas</h2>
+            <article>
+                <div>
+                <img src="/images/img-cafetera-moulinex.jpg" alt= "No se encontro imagen cafetera-moulinex">
+                </div>    
+                <div>
+                    <i class="fas fa-truck "></i>
+                </div>            <p class="precio">$6.770</p>
+                <p class="descuento">40% OFF</p>
+                <p class="descripcion">Cafetera Moulinex Dolce Gusto Lorem ipsum, dolor sit amet.</p>
+            </article>
+            <article>
+                <div>
+                <img src="/images/img-macbook-pro-2019.jpg" alt= "No se encontro imagen macbook-pro-2019">
+                </div>
+                <div>
+                    <i class="fas fa-truck "></i>
+                </div>            <p class="precio">$230.000</p>
+                <p class="descuento">20% OFF</p>
+                <p class="descripcion">Macbook Pro 2019 Lorem ipsum, dolor sit amet</p>
+            </article>
+            <article>
+                <div>
+                    <img src="/images/img-samsung-galaxy-s10.jpg" alt= "No se encontro imagen samsung-galaxy-s10">
+                </div>
+                <div>
+                    <i class="fas fa-truck "></i>
+                </div>            <p class="precio">1. $70.500</p>
+                <p class="descuento">15% OFF</p>
+                <p class="descripcion">Teléfono móvil Samsung Galaxy S10 Lorem ipsum, dolor sit amet.</p>
+            </article>
+            <article>
+                <div>
+                    <img src="/images/img-tv-samsung-smart.jpg" alt= "No se encontro imagen tv-samsung-smart">
+                </div>
+                <div>
+                    <i class="fas fa-truck "></i>
+                </div>            <p class="precio">$6.770</p>
+                <p class="descuento">5% OFF</p>
+                <p class="descripcion">SmartTv Samsung 43" Lorem ipsum, dolor sit amet.</p>
+            </article>
+        </section>
+    </main>    
+
+    <footer>
+        <div class="item_footer">
             <i class="fas fa-credit-card"></i>
             <p class="texto_footer_1">Pagá con tarjeta o en efectivo</p>
             <p class="texto_footer_2">Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivoen puntos de
                 pago. ¡Y siempre es seguro!</p>
         </div>
-        <div>    
+        <div class="item_footer">    
             <i class="fas fa-gift"></i>
             <p class="texto_footer_1">Envío gratis desde los $ 2.500</p>
             <p class="texto_footer_2">Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de
                 productos. Es un beneficio de MercadoPuntos.</p>
         </div>
-        <div>
+        <div class="item_footer">
             <i class="fas fa-user-shield"></i>
             <p class="texto_footer_1">Seguridad, de principio a fin</p>
             <p class="texto_footer_2">¿No te gusta? ¡Devolvelo! En MercadoLiebre no hay nada que no puedas hacer
                 porque estás siempre prtegid@.</p>
         </div>
-    </div>
-    <p class="copyright">Copyright © 1999-2019 MercadoLiebre S.R.L</p>
+        <p class="copyright">Copyright © 1999-2019 MercadoLiebre S.R.L</p>
+    </footer>
 </body>
 </html>

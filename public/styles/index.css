@@ -3,10 +3,15 @@
     --azul: #03264C;
     --celeste: #1259c3;
     --gris_oscuro: #666;
+    --gris_medio: rgb(223, 223, 223);
     --gris_claro: #ebebeb;
     --verde: #39b54a;
     --blanco: #ffffff;
     --negro: #000000;
+    --azul-boton_1: #0044aa;
+    --azul_boton_2: #0022aa;
+    --bordo_boton_1:  #cc1155;
+    --bordo_boton_2:  #cc1156a4;
 }
 
 * {
@@ -16,7 +21,7 @@
 
 body {
     font-family: "roboto", sans-serif;
-    background-color: var(--blanco);
+    background-color: var(--gris_claro);
     font-size: 12px;
     margin: 10px;
 }
@@ -41,6 +46,10 @@ header {
     font-weight: bold;
 }
 
+.logo_busqueda {
+    width: 50%;
+}
+
 .cuotas {
     margin-top: 10px;
     color: var(--negro);
@@ -50,11 +59,32 @@ header {
     color: var(--negro);
 }
 
-/* nav */
+/* navegacion */
+
+.hamburguesa {
+    text-align: center;
+    cursor: pointer;
+}
+
+.fas.fa-bars{
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    background-color: var(--azul-boton_1);
+    padding: 10px;
+    margin: 20px;
+    color: var(--blanco);
+}
+
+.fas.fa-bars:hover {
+    background-color: var(--azul_boton_2);
+}
 
 nav {
     padding-top: 20px;
-    background-color: var(--amarillo);
+    display: none; 
 }
 
 nav ul{
@@ -69,29 +99,49 @@ nav ul li a{
     font-weight: bold;
 }
 
+.hamburguesa:hover nav {
+    display: block;
+}
+
 /* banner */
 
 .banner {
     margin: 10px 0px;
 }
 
-/* section */
+/* main */
 
-section {
+.principal {
     background-color: var(--gris_claro);
     margin-bottom: 30px;
+    width: 90%;
+    margin:auto;
 }
 
 .titulares {
     font-weight: bold;
     background-color: var(--gris_claro);
-    color:#666;
+    color:var(--gris_oscuro);
+    margin: 20px;
+    vertical-align: middle;
+    font-size: 24px;
 }
 
 article {
     background-color: var(--blanco);
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin: 20px;
+    padding: 15px;
+}
+
+.camion {
+    border: 1px solid var(--verde);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    /* centrado con flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fas.fa-truck{
@@ -116,15 +166,21 @@ article {
 
 /* footer */
 
-.footer {
+footer {
     line-height: 30px;
-    margin-top: 30px;
+    padding: 20px 5%;
+    background-color: var(--blanco);
 }
 
 .fas.fa-credit-card, .fas.fa-gift, .fas.fa-user-shield {
-    color: var(--celeste); 
+    color: var(--celeste);
+    font-size:20px; 
 }
 
+.item_footer {
+    margin: 20px 0;   
+    line-height: 20px;
+}
 .texto_footer_1 {
     font-weight: bold;
     font-size:16px;
@@ -135,7 +191,7 @@ article {
 }
 
 .copyright {
-    margin-top: 30px;
+    margin: 20px;  
     font-weight: bold;
 }
 
@@ -143,19 +199,53 @@ article {
 
 .register {
     line-height: 30px;
-    padding-top: 20px;
+    padding: 10px;
+    margin: 20px;
 }
 
 .register_grupo {
-    line-height: 20px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.register_texto_1 {
+.register_item {
+    border-radius:5px;
+    border: 0px;
+    height: 30px;
+    width: 100%;
+}
+
+.register_boton {
+    border-radius:5px;
+    border: 0px;
+    height: 35px;
+    width: 100%;
+    color: var(--blanco);
+}
+
+.register_item.fecha {
+    background-color: var(--gris_medio);
+}
+
+.register_boton.enviar {
+    background-color: var(--azul-boton_1);
+}
+
+.register_boton.enviar:hover {
+    background-color: var(--azul_boton_2);
+}
+
+.register_boton.borrar {
+    background-color: var(--bordo_boton_1);
+}
+
+.register_boton.borrar:hover {
+    background-color: var(--bordo_boton_2);
+}
+
+.register_texto {
     font-weight: bold;
-    font-size:15px;
-}
-
-.register_texto_2 {
     font-size:15px;
 }
 
@@ -163,9 +253,34 @@ article {
 
 .login {
     line-height: 30px;
-    padding-top: 20px;
+    padding: 10px;
+    margin: 20px;
 }
 
 .login_grupo {
-    line-height: 20px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 5px;
 }
+
+.login_item {
+    border-radius:5px;
+    border: 0px;
+    height: 30px;
+    width: 100%;
+}
+
+.login_boton {
+    border-radius:5px;
+    border: 0px;
+    height: 35px;
+    width: 100%;
+    background-color: var(--azul-boton_1);
+    color: var(--blanco);
+}
+
+.login_boton:hover {
+    background-color: var(--azul_boton_2);
+}
+
+
