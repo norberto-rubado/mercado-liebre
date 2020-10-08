@@ -17,6 +17,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -26,16 +27,8 @@ body {
     margin: 10px;
 }
 
-img {
-    width: 100%;
-}
-
 i {
     color: var(--negro);
-}
-
-li {
-    list-style-type: none;
 }
 
 /* header */
@@ -47,12 +40,50 @@ header {
 }
 
 .logo_busqueda {
+    display: flex;
+}
+.logo {
     width: 50%;
+    padding: 2%;
+}
+.busqueda {
+    display: flex;
+    width: 50%;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    width: 90%;
+    height: 50%;
+    font-size: 12px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border: none;
+    padding: 0px 2px;
+}
+
+.busqueda button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 50%;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    border: none;
+    background-color: var(--blanco);
 }
 
 .cuotas {
     margin-top: 10px;
     color: var(--negro);
+    text-align: center;
+}
+
+.fas.fa-search {
+    width: 80%;
 }
 
 .fas.fa-hand-holding-usd, .fas.fa-address-card, .fas.fa-sign-in-alt, .fas.fa-shopping-basket {
@@ -67,19 +98,24 @@ header {
 }
 
 .fas.fa-bars{
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
     border-radius: 10px;
     text-align: center;
     font-size: 20px;
     background-color: var(--azul-boton_1);
-    padding: 10px;
+    padding: 7px;
     margin: 20px;
     color: var(--blanco);
 }
 
 .fas.fa-bars:hover {
     background-color: var(--azul_boton_2);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -89,6 +125,10 @@ nav {
 
 nav ul{
     padding-bottom: 20px;
+}
+
+nav ul li{  
+    list-style-type: none;  
 }
 
 nav ul li a{
@@ -109,59 +149,98 @@ nav ul li a{
     margin: 10px 0px;
 }
 
+.banner .imagen {
+    width: 100%;
+}
+
 /* main */
 
-.principal {
+main {
+/*     font-weight: bold; */
     background-color: var(--gris_claro);
-    margin-bottom: 30px;
-    width: 90%;
-    margin:auto;
+    color: var(--negro);
+    margin: 10px;
+    vertical-align: middle;
 }
 
 .titulares {
+    font-size: 20px;
     font-weight: bold;
-    background-color: var(--gris_claro);
-    color:var(--gris_oscuro);
-    margin: 20px;
-    vertical-align: middle;
-    font-size: 24px;
 }
 
-article {
+.ultimaCompra, .ofertas {
+    display: flex;
+    flex-direction: column;
+}
+
+.articulo {
     background-color: var(--blanco);
-    margin: 20px;
+    margin: 20px 10px;
     padding: 15px;
 }
 
-.camion {
-    border: 1px solid var(--verde);
+.articulo .imagen {
+    width: 100%;
+}
+
+.articulo .linea_camion {
+    display:flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--gris_claro);
+    margin-bottom: 15px;
+}
+
+.articulo .camion {
+    background-color: var(--blanco);
+    border: 2px solid var(--verde);
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    /* centrado con flex */
+    width: 36px;
+    height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 18px;
+    right:18px;
+    z-index: 1;
+}
+
+.articulo:hover .descripcion {
+    display:block;
+}
+
+.articulo:hover .camion {
+    transform: rotate(90deg);
+    transition: 1s all;
 }
 
 .fas.fa-truck{
     color: var(--verde);
+    font-size: 18px;
 }
 
-.precio {
+.articulo .importes {
+    display: flex;
+    flex-direction: row;
+}
+
+.articulo .importes .precio {
     font-size: 18px;
     font-weight: bold;
+    width: 30%
 }
 
-.descuento {
+.articulo .importes .descuento {
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     color: var(--verde);
+    width:70%;
 }
 
-.descripcion {
+.articulo .descripcion {
     font-size:16px;
     font-weight: normal;
+    display:none;
 }
 
 /* footer */
@@ -172,26 +251,37 @@ footer {
     background-color: var(--blanco);
 }
 
-.fas.fa-credit-card, .fas.fa-gift, .fas.fa-user-shield {
-    color: var(--celeste);
-    font-size:20px; 
+.pie {
+    display:flex;
+    flex-direction: column;
 }
 
-.item_footer {
-    margin: 20px 0;   
-    line-height: 20px;
+.fas.fa-credit-card, .fas.fa-gift, .fas.fa-user-shield {
+    color: var(--celeste);
+    font-size:24px; 
+/*     align-self: center; */
 }
-.texto_footer_1 {
+
+.item {
+    margin: 20px 0;   
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item .titulo {
     font-weight: bold;
     font-size:16px;
 }
 
-.texto_footer_2 {
+.item .descripcion {
     line-height: 15px;
+    text-align: center;
 }
 
-.copyright {
-    margin: 20px;  
+footer .copyright {
+    margin: 20px 0px;  
     font-weight: bold;
 }
 
@@ -199,8 +289,8 @@ footer {
 
 .register {
     line-height: 30px;
-    padding: 10px;
-    margin: 20px;
+    padding: 15px;
+    margin: 10px;
 }
 
 .register_grupo {
@@ -249,12 +339,26 @@ footer {
     font-size:15px;
 }
 
+/* .perfil {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.porcion {
+    width: 50%;
+}
+
+.intereses {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
 /*login */
 
 .login {
     line-height: 30px;
-    padding: 10px;
-    margin: 20px;
+    padding: 15px;
+    margin: 10px;
 }
 
 .login_grupo {
@@ -283,4 +387,113 @@ footer {
     background-color: var(--azul_boton_2);
 }
 
+@media (min-width: 768px){
+    .titulares {
+        font-size: 30px;
+    }
+    .ultimaCompra, .ofertas {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .articulo {
+        width: 47%;
+    }
+    .porcion {
+        width: 20%;
+    }
 
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        width:50%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu_derecha {
+        justify-content: flex-end;
+    }
+
+    .menu_izquierda {
+        justify-content: flex-start;
+    }
+
+    .encabezado {
+        display:flex;
+        flex-direction: row;´
+    }
+
+    .logo_busqueda {
+        width: 60%;
+    }
+
+    .cuotas {
+        width: 40%;
+        display: flex;
+        padding: 2%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .titulares {
+        font-size: 36px;
+    }
+    .ultimaCompra, .ofertas {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .articulo {
+        width: 30%;
+    }
+    .porcion {
+        width: 20%;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        width:50%;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu_derecha {
+        justify-content: flex-end;
+    }
+
+    .menu_izquierda {
+        justify-content: flex-start;
+    }
+
+    .pie {
+        flex-direction: row;
+    }
+
+    .encabezado {
+        display:flex;
+        flex-direction: row;´
+    }
+
+    .logo_busqueda {
+        width: 60%;
+    }
+
+    .cuotas {
+        width: 40%;
+        display: flex;
+        padding: 2%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

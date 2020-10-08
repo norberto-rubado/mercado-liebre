@@ -7,50 +7,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="/styles/index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
-        <div class="logo_busqueda"> 
-            <img src="/images/logo-mercado-liebre.svg" alt="No se encontro imagen logo-mercado-liebre"> 
-            <div>
-                <input type="text" name="search" id="search" placeholder="Buscar productos, marcas y más">
-                <button type="submit"> 
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-        </div> 
+        <div class="encabezado">
+            <div class="logo_busqueda"> 
+                <img class="logo" src="/images/logo-mercado-liebre.svg" alt="No se encontro imagen logo-mercado-liebre"> 
+                <div class="busqueda">
+                    <input type="text" name="search" id="search" placeholder="Buscar productos, marcas y más">
+                    <button type="submit"> 
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div> 
 
-        <div class="cuotas">
-            <i class="fas fa-hand-holding-usd"></i>
-            <span>Compra en cuotas y sin tarjeta de credito</span> 
+            <div class="cuotas">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Compra en cuotas y sin tarjeta de credito</span> 
+            </div>
         </div>
 
         <div class="hamburguesa">
             <i class="fas fa-bars"></i>
             <nav>
-                <ul>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Tiendas Oficiales</a></li>
-                    <li><a href="#">Vender</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
-                <ul>    
-                    <li>
-                        <a href="/register">Crea tu Cuenta</a>
-                        <i class="fas fa-address-card"></i>
-                    </li>
-                    <li>
-                        <a href="/login">Ingresa</a>
-                        <i class="fas fa-sign-in-alt"></i>
-                    </li>
-                    <li>
-                        <a href="#">Mis Compras</a>
-                        <i class="fas fa-shopping-basket"></i>
-                    </li>
-                </ul>
+                <div class="menu">
+                    <ul class="menu_izquierda">
+                        <li><a href="#">Ofertas</a></li>
+                        <li><a href="#">Tiendas Oficiales</a></li>
+                        <li><a href="#">Vender</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                    </ul>
+                    <ul class="menu_derecha">  
+                        <li>
+                            <a href="/register">Crea tu Cuenta</a>
+                            <i class="fas fa-address-card"></i>
+                        </li>
+                        <li>
+                            <a href="/login">Ingresa</a>
+                            <i class="fas fa-sign-in-alt"></i>
+                        </li>
+                        <li>
+                            <a href="#">Mis Compras</a>
+                            <i class="fas fa-shopping-basket"></i>
+                        </li>
+                    </ul>
+                </div>    
             </nav>
         </div>
     </header>        
+
+    <section class="banner">
+        <img class="imagen" src="/images/img-home-banner.jpg" alt= "No se encontro imagen">
+    </section>
 
     <main class="register">
         <form action="/" method="GET">
@@ -75,28 +84,33 @@
                 </p>
             </div>
             </p><label class="register_texto" for="">Perfil de usuario</label><p>
-            <p>
-                <input type= "radio" name= "profile_type" value="C"> Comprador
-            </p>
-            <p>
-                <input type= "radio" name= "profile_type" value="V"> Vendedor
-            </p>
+            <div class="perfil">    
+                <p class="porcion">
+                    <input type= "radio" name= "profile_type" value="C"> Comprador
+                </p>
+                <p class="porcion">
+                    <input type= "radio" name= "profile_type" value="V"> Vendedor
+                </p>
+            </div>
             </p><label class="register_texto" for="">Intereses</label><p>
-            <p>
-                <input type= "checkbox" name= "interests" value="E"> Electro
-            </p>
-            <p>
-                <input type= "checkbox" name= "interests" value="M"> Moda
-            </p>
-            <p>
-                <input type= "checkbox" name= "interests" value="H"> Hogar
-            </p>
-            <p>
-                <input type= "checkbox" name= "interests" value="J"> Jugueteria
-            </p>
-            <p>
-                <input type= "checkbox" name= "interests" value="V"> Vida Sana
-            </p>
+            <div class="intereses">    
+                <p class="porcion">
+                    <input type= "checkbox" name= "interests" value="E"> Electro
+                </p>
+                <p class="porcion">
+                    <input type= "checkbox" name= "interests" value="M"> Moda
+                </p>
+                <p class="porcion">
+                    <input type= "checkbox" name= "interests" value="H"> Hogar
+                </p>
+                <p class="porcion">
+                    <input type= "checkbox" name= "interests" value="J"> Jugueteria
+                </p>
+                <p class="porcion">
+                    <input type= "checkbox" name= "interests" value="V"> Vida Sana
+                </p>
+            </div>
+
             </p><label class="register_texto" for="">Elegi tu foto de usuario</label><p>
                 <p>
                     <input type= "file" id="photo" name= "photo">
@@ -116,26 +130,28 @@
                 </p>  
             </div>      
         </form>    
-    </main>
+    </main>  
 
     <footer>
-        <div class="item_footer">
-            <i class="fas fa-credit-card"></i>
-            <p class="texto_footer_1">Pagá con tarjeta o en efectivo</p>
-            <p class="texto_footer_2">Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivoen puntos de
-                pago. ¡Y siempre es seguro!</p>
+        <div class="pie">
+            <div class="item">
+                <i class="fas fa-credit-card"></i>
+                <p class="titulo">Pagá con tarjeta o en efectivo</p>
+                <p class="descripcion">Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivoen puntos de
+                    pago. ¡Y siempre es seguro!</p>
             </div>
-        <div class="item_footer">    
-            <i class="fas fa-gift"></i>
-            <p class="texto_footer_1">Envío gratis desde los $ 2.500</p>
-            <p class="texto_footer_2">Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de
-                productos. Es un beneficio de MercadoPuntos.</p>
+            <div class="item">    
+                <i class="fas fa-gift"></i>
+                <p class="titulo">Envío gratis desde los $ 2.500</p>
+                <p class="descripcion">Solo por estar registrad@ en MercadoLiebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de MercadoPuntos.</p>
             </div>
-        <div class="item_footer">
-            <i class="fas fa-user-shield"></i>
-            <p class="texto_footer_1">Seguridad, de principio a fin</p>
-            <p class="texto_footer_2">¿No te gusta? ¡Devolvelo! En MercadoLiebre no hay nada que no puedas hacer
-                porque estás siempre prtegid@.</p>
+            <div class="item">
+                <i class="fas fa-user-shield"></i>
+                <p class="titulo">Seguridad, de principio a fin</p>
+                <p class="descripcion">¿No te gusta? ¡Devolvelo! En MercadoLiebre no hay nada que no puedas hacer
+                    porque estás siempre prtegid@.</p>
+            </div>
         </div>
         <p class="copyright">Copyright © 1999-2019 MercadoLiebre S.R.L</p>
     </footer>
