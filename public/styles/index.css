@@ -259,6 +259,7 @@ footer {
 .fas.fa-credit-card, .fas.fa-gift, .fas.fa-user-shield {
     color: var(--celeste);
     font-size:24px; 
+    align-self: center;
 /*     align-self: center; */
 }
 
